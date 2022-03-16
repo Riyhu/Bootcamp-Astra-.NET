@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Downloads\\Butkem ASTRA\\Rio-Day1\\Rio-Day1.csproj",
-      "projectName": "Rio-Day1",
-      "projectPath": "C:\\Users\\User\\Downloads\\Butkem ASTRA\\Rio-Day1\\Rio-Day1.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Downloads\\Butkem ASTRA\\Rio-Day1\\Rio.csproj",
+      "projectName": "Rio",
+      "projectPath": "C:\\Users\\User\\Downloads\\Butkem ASTRA\\Rio-Day1\\Rio.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\Downloads\\Butkem ASTRA\\Rio-Day1\\obj\\",
       "projectStyle": "PackageReference",
