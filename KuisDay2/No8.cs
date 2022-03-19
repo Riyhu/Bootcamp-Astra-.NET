@@ -2,21 +2,48 @@
 {
     class No8
     {
+        
         public static void RandomChar()
         {
-            String[] arry = new String[100];
-            String[] arry2 = new String[arry.Length];
-            Random random = new Random();
-            for (int i = 0; i < arry.Length; i++)
+            var alpa = "abcdefghijklmnopqrstuvwxyz";
+            Random rand = new Random();
+            char[] list = new char[100];
+            for (int i = 0; i < 100; i++)
             {
-                int temp = random.Next();
-                arry2[temp] = arry[i];
+                list[i] = alpa[rand.Next(0,26)];
             }
-            Console.WriteLine("Angka setelah random: ");
-            for (int i = 0; i < arry.Length; i++)
+            ReadChar(list);
+            Console.WriteLine(" ======== Result ======== ");
+            Array.Sort(list);
+            int count = 1;
+            for (int i = 0; i < list.Length; i++)
             {
-                Console.Write(arry[i] + " ");
+                int x = list[i];
+                if (i < list.Length - 1 && x == list[i + 1])
+                {
+                    count++;
+                }
+                else if (i == list.Length - 1 && x == list[i - 1])
+                {
+                    Console.Write($"{count} {list[i]} ");
+                }
+                else
+                {
+                    Console.Write($"{count} {list[i]} ");
+                    count = 1;
+                }
             }
+        }
+
+
+        public static void ReadChar(char[] list)
+        {
+            for (int i = 0; i < list.Length; i++)
+            {
+                Console.Write($"{list[i]} ");
+
+            }
+            Console.WriteLine();
         }
     }
 }

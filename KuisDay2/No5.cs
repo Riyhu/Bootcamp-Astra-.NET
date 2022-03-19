@@ -2,25 +2,41 @@
 {
     class No5
     {
-        public static void Sama()
+        static void DisplayArrayNumber(int[] angka)
         {
-            int [] arry = new int[] {5,2,30,12,10,5,2,10,5};
+            
+            for (int i = 0; i < angka.Length; i++)
+            {
+                Console.Write(angka[i] + " ");
+            }
+            Console.WriteLine();
+        }
+        public static void CountValue()
+        {
+            int[] arry = new int[] { 5, 2, 30, 12, 10, 5, 2, 10, 5 };
+            DisplayArrayNumber(arry);
             //int[] temp = new int[arry.Length];
-           
+            List<int> nilaiSama = new List<int>();
+
             for (int i = 0; i < arry.Length; i++)
             {
                 int flag = 1;
-                for (int j = i+1; j < arry.Length; j++)
+                if (nilaiSama.Contains(arry[i]))
                 {
-                    if (arry[i]==arry[j])
+                    continue;
+                }
+                for (int j = i + 1; j < arry.Length; j++)
+                {
+
+                    if (arry[i] == arry[j])
                     {
                         flag++;
+                        nilaiSama.Add(arry[i]);
                     }
                 }
-                int []arryBaru = arry.Distinct().ToArray();
-                Console.WriteLine($"\nbanyak nya angka {arryBaru[i]} sebanyak {flag}");
+                Console.WriteLine("banyak nya angka " + arry[i] + " sebanyak " + flag);
             }
-           
         }
+
     }
 }
